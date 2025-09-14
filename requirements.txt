@@ -1,6 +1,22 @@
-# TensorFlow 升級到 2.12，兼容 Python 3.10+
+# 升級 TensorFlow 版本，避免 2.7 無法安裝
 tensorflow>=2.12,<3.0
+
+# 數值與資料處理
 numpy>=1.23,<2.0
 pandas>=1.5,<2.0
-scikit-learn>=1.1,<2.0
+scipy>=1.9,<2.0
 
+# 機器學習
+scikit-learn>=1.1,<2.0
+xgboost>=1.7,<2.0
+
+# 深度學習與模型工具
+keras>=2.12,<3.0
+
+# 可視化
+matplotlib>=3.7,<4.0
+seaborn>=0.12,<1.0
+
+# 其他可能用到的工具
+joblib>=1.2,<2.0
+pillow>=9.5,<10.0
