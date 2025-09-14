@@ -24,3 +24,6 @@ pillow>=9.5,<10.0
 # FastAPI & Uvicorn
 fastapi>=0.105,<1.0
 uvicorn[standard]>=0.22,<1.0
+
+# 金融資料抓取
+yfinance>=0.2.22
