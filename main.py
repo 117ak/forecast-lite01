@@ -1,6 +1,7 @@
 import yfinance as yf
 import numpy as np
 from datetime import datetime, timedelta
+import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 # -----------------------------
@@ -10,7 +11,8 @@ from tensorflow.keras.models import load_model
 from models.model_user_rf import run_prediction as run_rf
 
 # LSTM 與 Inception 模型
-lstm_model = load_model("models/lstm_model.h5")
+# ⚠️ LSTM 要用 SavedModel 版本，不要再用 h5
+lstm_model = tf.keras.models.load_model("models/lstm_model_saved")
 inception_model = load_model("models/inception_model_final.h5")
 
 # -----------------------------
@@ -69,11 +71,3 @@ if __name__ == "__main__":
     preds = predict_all()
     for p in preds:
         print(p)
-import tensorflow as tf
-
-# 載入 SavedModel
-lstm_model = tf.keras.models.load_model("models/lstm_model_saved")
-
-# 測試模型摘要
-lstm_model.summary()
-
