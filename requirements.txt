@@ -1,4 +1,4 @@
-# 升級 TensorFlow 版本，避免 2.7 無法安裝
+# TensorFlow 升級到 2.12+
 tensorflow>=2.12,<3.0
 
 # 數值與資料處理
@@ -17,6 +17,10 @@ keras>=2.12,<3.0
 matplotlib>=3.7,<4.0
 seaborn>=0.12,<1.0
 
-# 其他可能用到的工具
+# 其他常用工具
 joblib>=1.2,<2.0
 pillow>=9.5,<10.0
+
+# FastAPI & Uvicorn
+fastapi>=0.105,<1.0
+uvicorn[standard]>=0.22,<1.0
