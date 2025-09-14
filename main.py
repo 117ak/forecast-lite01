@@ -69,3 +69,11 @@ if __name__ == "__main__":
     preds = predict_all()
     for p in preds:
         print(p)
+import tensorflow as tf
+
+# 載入 SavedModel
+lstm_model = tf.keras.models.load_model("models/lstm_model_saved")
+
+# 測試模型摘要
+lstm_model.summary()
+
