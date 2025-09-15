@@ -71,3 +71,5 @@ if __name__ == "__main__":
     preds = predict_all()
     for p in preds:
         print(p)
+lstm_model = tf.keras.models.load_model("models/lstm_model.h5")
+
