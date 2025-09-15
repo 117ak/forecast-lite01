@@ -17,3 +17,5 @@ def run_prediction(symbol, sample_size, horizon_days=7):
         t = (start_time + timedelta(days=i)).isoformat()+"Z"
         pts.append((t, float(y_pred[i % len(y_pred)])))
     return pts
+    model.save("models/lstm_model_saved")
+
